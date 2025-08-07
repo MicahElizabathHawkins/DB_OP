@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Button;
 import android.widget.Toast;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
                 db.execSQL(Query);
 
                 Toast.makeText(MainActivity.this,"Inserted", Toast.LENGTH_SHORT).show();
+                Intent intent= new Intent(MainActivity.this,Homepage.class);
+                startActivity(intent);
+                finish();
 
             }
 
